@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
+export const generateStaticParams = () => {
   // top 100 most popular events
   return [
     {
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
       slug: "dj-practice-session",
     },
   ];
-}
+};
 
 export default async function EventPage({ params }: Props) {
   const slug = params.slug;
